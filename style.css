@@ -31,6 +31,8 @@
     --phoneIcon: url(img/light/phoneIcon.png);
     --mailIcon: url(img/light/mailIcon.png);
 
+    --swiper-theme-color: var(--text-color-light)
+
 }
 
 [data-theme="dark"]{
@@ -66,6 +68,8 @@
      --placeIcon: url(img/dark/placeIcon-dark.png);
      --phoneIcon: url(img/dark/phoneIcon-dark.png);
      --mailIcon: url(img/dark/mailIcon-dark.png);
+
+     --swiper-theme-color: var(--text-color-light)
 
 }
 
@@ -232,6 +236,7 @@ a{
     border: none;
     background-image: url(img/sun.png);
     background-size: contain;
+    z-index: 100;
 }
 
 .themeTogglerButton:hover{
@@ -384,7 +389,7 @@ a{
 .sliderItems{
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+
     align-items: center;
 
 }
@@ -410,6 +415,9 @@ a{
     margin-top: 7rem;
 }
 
+
+
+
 .sliderTitle{
     margin-bottom: 0;
     text-transform: uppercase;
@@ -426,18 +434,9 @@ a{
 }
 
 
-.sliderBlock .text{
-    width: auto;
-    padding-bottom: 5rem;
-
-
-    font-size: 2rem;
-    
-}
-
 
 .contactBlock{
-    margin: 9rem 14rem;
+    margin: 9rem 14%;
 
     padding: 4rem 5rem;
 
@@ -474,6 +473,19 @@ a{
     gap: 1rem;
     margin-left: .5rem;
 
+}
+
+.swiper-slide{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+
+    
 }
 
 input{
@@ -538,50 +550,89 @@ input::placeholder{
     top: -2.5rem;
 }
 
-img[src*="img/delivery.png"]{
+img[src*="img/light/delivery.png"]{
     content: var(--advantageImage-delivery);
 }
-img[src*="img/consult.png"]{
+img[src*="img/light/consult.png"]{
     content: var(--advantageImage-consult);
 }
-img[src*="img/photo.png"]{
+img[src*="img/light/photo.png"]{
     content: var(--advantageImage-photo);
 }
-img[src*="img/rent.png"]{
+img[src*="img/light/rent.png"]{
     content: var(--advantageImage-rent);
 }
-img[src*="img/hours.png"]{
+img[src*="img/light/hours.png"]{
     content: var(--advantageImage-hours);
 }
-img[src*="img/placeIcon.png"]{
+img[src*="img/light/placeIcon.png"]{
     content: var(--placeIcon);
 }
-img[src*="img/phoneIcon.png"]{
+img[src*="img/light/phoneIcon.png"]{
     content: var(--phoneIcon);
 }
-img[src*="img/mailIcon.png"]{
+img[src*="img/light/mailIcon.png"]{
     content: var(--mailIcon);
 }
-img[src*="img/map.png"]{
+img[src*="img/light/map.png"]{
     content: var(--mapImg);
 }
-img[src*="img/Blob_01.png"]{
+img[src*="img/light/Blob_01.png"]{
     content: var(--blob1);
 }
-img[src*="img/Blob_02.png"]{
+img[src*="img/light/Blob_02.png"]{
     content: var(--blob2);
 }
-img[src*="img/Blob_03.png"]{
+img[src*="img/light/Blob_03.png"]{
     content: var(--blob3);
 }
-img[src*="img/LOGO-Light.png"]{
+img[src*="img/light/LOGO-Light.png"]{
     content: var(--LogoImg);
 }
 
+
+#headerWide{
+    display: flex;
+}
+
+#headerThin{
+    display:none;
+}
+
+
+.modal{
+    display: flex;
+
+    background-color: var(--main-bg-color-light);
+    
+    width: 25%;
+    
+    flex-direction: column;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: flex;
+}
+
+.FilterButton{
+    width: 50px;
+    height: 50px;
+    background-image: url(img/menu.png);
+    background-size: cover;
+}
 
 @media (max-width: 1500px) { 
 
     .FlexWrap{
         flex-wrap: wrap;
     }
+
+
+
+
  }
