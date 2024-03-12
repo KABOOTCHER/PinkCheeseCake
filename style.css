@@ -1,0 +1,587 @@
+:root{
+   /* ---------LIGHT THEME----- */ 
+    /* COLORS */
+    --main-bg-color-light: #FCF3E9;
+    --first-accent-color-light: #DC76A7;
+    --second-accent-color-light: #F5C8DE;
+    --text-color-light:#000000;
+
+    /* BG's */
+   --FirstBG-Light: url(img/light/firstBG.png);
+   --sellBlockBG-Light: url(img/light/PopularBlockBG.png);
+   --footerBG-Light: url(img/light/footerBG.png);
+
+   /* IMG's */
+    --advantageImage-delivery: url(img/light/delivery.png);
+    --advantageImage-consult: url(img/light/consult.png);
+    --advantageImage-photo: url(img/light/photo.png);
+    --advantageImage-rent: url(img/light/rent.png);
+    --advantageImage-hours: url(img/light/hours.png);
+
+    --blob1: url(img/light/Blob_01.png);
+    --blob2: url(img/light/Blob_02.png);
+    --blob3: url(img/light/Blob_03.png);
+
+
+    --mapImg: url(img/light/map.png);
+
+    --LogoImg: url(img/light/LOGO-Light.png);
+
+    --placeIcon: url(img/light/placeIcon.png);
+    --phoneIcon: url(img/light/phoneIcon.png);
+    --mailIcon: url(img/light/mailIcon.png);
+
+}
+
+[data-theme="dark"]{
+
+    /* COLORS */
+    --main-bg-color-light: #222222 !important;
+    --first-accent-color-light: #74569E !important;
+    --second-accent-color-light: #DDB7E6 !important;
+    --text-color-light:#F1F1F1 !important;
+
+    /* BG's */
+   --FirstBG-Light: url(img/dark/firstBG-dark.png);
+   --sellBlockBG-Light: url(img/dark/PopularBlockBG-dark.png);
+   --footerBG-Light: url(img/dark/footerBG-dark.png);
+
+
+     /* IMG's */
+     --advantageImage-delivery: url(img/dark/delivery-dark.png);
+     --advantageImage-consult: url(img/dark/consult-dark.png);
+     --advantageImage-photo: url(img/dark/photo-dark.png);
+     --advantageImage-rent: url(img/dark/rent-dark.png);
+     --advantageImage-hours: url(img/dark/hours-dark.png);
+ 
+     --blob1: url(img/dark/Blob_01-dark.png);
+     --blob2: url(img/dark/Blob_02-dark.png);
+     --blob3: url(img/dark/Blob_03-dark.png);
+ 
+ 
+     --mapImg: url(img/dark/map-dark.png);
+ 
+     --LogoImg: url(img/dark/LOGO-dark.png);
+ 
+     --placeIcon: url(img/dark/placeIcon-dark.png);
+     --phoneIcon: url(img/dark/phoneIcon-dark.png);
+     --mailIcon: url(img/dark/mailIcon-dark.png);
+
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src:
+        url('fonts/montserrat/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:
+        url('fonts/montserrat/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src:
+        url('fonts/girloy/Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: 
+        url('fonts/girloy/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: 
+        url('fonts/girloy/Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+html{
+background-color: var(--main-bg-color-light);
+font-family: Gilroy,'Segoe UI';
+
+font-size: 20px;
+
+color: var(--text-color-light);
+}
+
+
+h1{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+
+    color: var(--text-color-light);
+    text-wrap: nowrap;
+}
+
+
+.header{
+
+    height: 7rem;
+    display: flex;
+
+    gap: 3rem;
+    
+    
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-bottom: 1px solid var(--text-color-light);
+    font-family: Gilroy;
+    font-weight: normal;
+
+    font-size: 21px;
+
+}
+
+
+.navBlock{
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 2rem;
+}
+
+
+.HeaderLogo{
+    position: relative;
+    z-index: 2;
+    top: 60%;
+}
+
+
+
+.headingBlock{
+    background-size: cover;
+    padding: 0% 7% 0 7%;
+    background-image: var(--FirstBG-Light);
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-position: bottom;
+    
+    
+}
+
+.headingTextBlock{
+    padding: 14% 8% 0 8%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.HeadingTitle{
+    font-size: 5rem;
+    font-family: Gilroy;
+    font-weight: 500;
+
+}
+
+.text{
+    font-size: 21px;
+    font-weight: 300;
+    width: -webkit-fill-available;
+}
+
+.subtitleText{
+    font-size: 21px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+
+.headingTextBlock .subtitleText{
+    margin-top: 2rem;
+}
+
+.themeTogglerButton{
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    width: 2rem;
+    height: 2rem;
+    opacity: .7;
+    background-color: transparent;
+    border: none;
+    background-image: url(img/sun.png);
+    background-size: contain;
+}
+
+.themeTogglerButton:hover{
+    cursor: pointer;
+}
+
+.darkButton{
+
+    display: flex;
+    text-align: center;
+    background-color: var(--first-accent-color-light);
+    color: white;
+    width: 15rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    justify-content: center;
+
+    font-family: Gilroy;
+    font-weight: 500;
+}
+
+.centerTitle{
+    margin-top: 11rem;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4.2rem;
+
+}
+.itemsTitle{
+    margin-top: 11rem;
+    font-weight: normal;
+
+    text-transform: uppercase;
+    font-size: 4.2rem;
+
+}
+
+
+.advantageItems{
+    padding: 7% 8% 0 8%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 11rem;
+    row-gap: 4rem;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.advantageItem{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.advantageItem .text{
+    margin: 0;
+    text-align: center;
+}
+.advantageItem .subtitleText{
+    margin: 0;
+}
+
+#specialOffers{
+    margin-top: 14rem ;
+}
+
+.offersBlock{
+    padding: 4.5% 12% ;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+}
+
+
+.offerImg{
+    background-color: gray;
+
+    width: 22rem;
+    height: 22rem;
+}
+
+.offer{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.offerRight{
+    flex-direction: row-reverse;
+
+}
+.offerLeft{
+    flex-direction: row;
+
+}
+
+
+
+.offerInfo{
+    font-size: 2rem;
+    font-family: Gilroy;
+    font-weight: 500;
+
+    text-transform: uppercase;
+}
+
+
+.offerText{
+    font-size: 1rem;
+    font-family: Montserrat;
+    font-weight: 300;
+    line-height: 160%;
+    text-transform: none;
+    margin-left: 2rem;
+}
+
+.offerBlob{
+    position: relative;
+}
+.offerOrder{
+    z-index: 2;
+    position: relative;
+    top: 4rem;
+    margin: 0;
+    left: 2rem;
+    width: fit-content;
+}
+
+
+.sellBlock{
+    background-repeat: no-repeat;
+    background-image: var(--sellBlockBG-Light);
+    padding: 0 14%;
+    padding-bottom: 12%;
+    
+}
+
+#blobTitle{
+    padding-top: 5rem;
+    margin-top: 0;
+}
+
+
+.sliderItems{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+
+}
+
+.sliderCard{
+    display: flex;
+    flex-direction: column;
+    font-family: Gilroy;
+    font-weight: 300;
+    align-items: center;
+}
+
+.sliderImg{
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--main-bg-color-light);
+}
+
+.sliderBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7rem;
+}
+
+.sliderTitle{
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.sliderPrice{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.sliderSubtitle{
+    margin: 0;
+}
+
+
+.sliderBlock .text{
+    width: auto;
+    padding-bottom: 5rem;
+
+
+    font-size: 2rem;
+    
+}
+
+
+.contactBlock{
+    margin: 9rem 14rem;
+
+    padding: 4rem 5rem;
+
+    background-color: var(--second-accent-color-light);
+    border: solid 1px var(--text-color-light);
+    border-radius: 100px;
+}
+
+#contactTitle{
+    font-family: Gilroy;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 4.2rem;
+}
+
+.contactSubtitle{
+    margin: .7rem;
+    font-size: 1.2rem;
+}
+
+.FlexWrap{
+    display: flex;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+
+    width: -webkit-fill-available;
+    justify-content: flex-start;
+
+    gap: 1rem;
+    margin-left: .5rem;
+
+}
+
+input{
+    width: -webkit-fill-available;
+    font-family: Gilroy ;
+    height: 2rem;
+    border-radius: 2.5rem;
+    border: 2px solid var(--text-color-light);
+}
+
+input::placeholder{
+    padding-left: 1.5rem;
+}
+
+#sendButton{
+    margin-top: .5rem;
+    background-color: var(--first-accent-color-light);
+    color:white;
+}
+
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+
+    width: -webkit-fill-available;
+}
+
+.contactItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.contactText{
+    margin-top: 1.5rem;
+}
+
+.footer{
+    background-image: var(--footerBG-Light);
+    background-repeat: no-repeat;
+    padding: 0% 5% 5% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    gap: 4rem;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    margin-top: 10rem;
+}
+
+.footerNav{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footerLogo{
+    position: relative;
+    top: -2.5rem;
+}
+
+img[src*="img/delivery.png"]{
+    content: var(--advantageImage-delivery);
+}
+img[src*="img/consult.png"]{
+    content: var(--advantageImage-consult);
+}
+img[src*="img/photo.png"]{
+    content: var(--advantageImage-photo);
+}
+img[src*="img/rent.png"]{
+    content: var(--advantageImage-rent);
+}
+img[src*="img/hours.png"]{
+    content: var(--advantageImage-hours);
+}
+img[src*="img/placeIcon.png"]{
+    content: var(--placeIcon);
+}
+img[src*="img/phoneIcon.png"]{
+    content: var(--phoneIcon);
+}
+img[src*="img/mailIcon.png"]{
+    content: var(--mailIcon);
+}
+img[src*="img/map.png"]{
+    content: var(--mapImg);
+}
+img[src*="img/Blob_01.png"]{
+    content: var(--blob1);
+}
+img[src*="img/Blob_02.png"]{
+    content: var(--blob2);
+}
+img[src*="img/Blob_03.png"]{
+    content: var(--blob3);
+}
+img[src*="img/LOGO-Light.png"]{
+    content: var(--LogoImg);
+}
+
+
+@media (max-width: 1500px) { 
+
+    .FlexWrap{
+        flex-wrap: wrap;
+    }
+ }
