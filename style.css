@@ -322,9 +322,20 @@ a{
 
 .offerImg{
     background-color: gray;
-
+    background-size: cover;
+   
     width: 22rem;
     height: 22rem;
+}
+
+#FirstOffer{
+    background-image: url(img/free.jpg);
+}
+#SecondOffer{
+    background-image: url(img/deliveryGuy.jpeg);
+}
+#ThirdOffer{
+    background-image: url(img/everyday.jpg);
 }
 
 .offer{
