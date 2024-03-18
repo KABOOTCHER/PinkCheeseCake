@@ -338,6 +338,21 @@ a{
     background-image: url(img/everyday.jpg);
 }
 
+#firstSliderImg{
+    background-image: url(img/aerograph.png);
+    background-size: cover;
+}
+
+#secondSliderImg{
+    background-image: url(img/aroma.jpg);
+    background-size: cover;
+}
+
+#thirdSliderImg{
+    background-image: url(img/heartForm.jpg);
+    background-size: cover;
+}
+
 .offer{
     display: flex;
     justify-content: space-evenly;
