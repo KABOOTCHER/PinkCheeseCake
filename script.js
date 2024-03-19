@@ -21,5 +21,3 @@ const setThemeOnInit = () =>{
 }
 
 setThemeOnInit()
-
-
