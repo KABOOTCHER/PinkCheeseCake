@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/light/favicon.ico" type="image/x-icon">
 
-    <title>Розовый чизкейк  - доставка товаров для кондитеров по СПБ и ЛО</title>
+    <title>Розовый чизкейк - доставка товаров для кондитеров по СПБ и ЛО</title>
     <link rel="stylesheet" href="normalize.css">
-   
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-    
 
 
-    <main class="main" >
-        
+
+    <main class="main">
+
         <div class="headingBlock">
 
 
-            <header class="header" id="headerWide" data-aos-anchor-placement="bottom-bottom"  data-aos-duration="1000" data-aos="fade-in" >
-                <nav class="navBlock" >
+            <header class="header" id="headerWide" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000"
+                data-aos="fade-in">
+                <nav class="navBlock" id="navbar">
                     <a href="#" class="navLink">О нас</a>
                     <a href="#" class="navLink">Контакты</a>
                     <a href="#" class="navLink">Товары</a>
                     <a href="#" class="navLink">Услуги</a>
                 </nav>
                 <a href="#" class="navlink HeaderLogo"><img src="img/light/LOGO-Light.png" alt="LOGO"></a>
-                <nav class="navBlock">
+                <nav class="navBlock" id="navbar">
                     <a href="#" class="navLink">WhatsApp</a>
                     <a href="#" class="navLink">Telegram</a>
                     <a href="#" class="navLink">VK</a>
@@ -39,13 +42,43 @@
                 </nav>
 
 
-                
+
+                </nav>
+
+            </header>
+            <header class="header" id="headerSmall" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000"
+                data-aos="fade-in">
+
+                <a href="#" class="navlink HeaderLogo"><img src="img/light/LOGO-Light.png" alt="LOGO"></a>
+                <nav id="sidebar" class="navBlock hidden">
+
+                    <div>
+                        <a href="#" class="navLink">О нас</a>
+                        <a href="#" class="navLink">Контакты</a>
+                        <a href="#" class="navLink">Товары</a>
+                        <a href="#" class="navLink">Услуги</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="navLink">WhatsApp</a>
+                        <a href="#" class="navLink">Telegram</a>
+                        <a href="#" class="navLink">VK</a>
+                        <a href="#" class="navLink">Instagram</a>
+                    </div>
+
+                </nav>
+
+
+
+                </nav>
+
+                <button class="navbarToggler" onclick="toggleNavbar()"></button>
             </header>
 
+            <button class="themeTogglerButton" onclick="toggleTheme()"></button>
 
-            <button class="themeTogglerButton"  onclick="toggleTheme()"></button>
-        
-            <div class="headingTextBlock" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000" data-aos="fade-in" >
+            <div class="headingTextBlock" data-aos-anchor-placement="top-bottom" data-aos-duration="1000"
+                data-aos="fade-in">
 
                 <div>
                     <h1 class="HeadingTitle">Розовый чизкейк</h1>
@@ -57,72 +90,73 @@
                         <br>
                         заканчивается ненужный краситель, ломается фигурка, рассыпается смесь.
                     </p>
-        
+
                     <p class="subtitleText">
                         Где кондитеру найти товары поздним вечером, ночью или ранним утром?
                     </p>
-        
+
                 </div>
-               
+
                 <a href="#" class="darkButton">У нас!</a>
-               
-                
+
+
             </div>
-            
+
 
         </div>
 
 
-        
-
-            <h1 class="HeadingTitle centerTitle" data-aos-duration="1000"  data-aos="fade-in">Наши преимущества</h1>
 
 
-            <div class="advantageItems">
-
-                <div class="advantageItem" data-aos="zoom-in-right" data-aos-delay="200" data-aos-duration="700">
-                    <img src="img/light/delivery.png" alt="" class="advantageImage">
-                    <p class="subtitleText">Доставляем на дом</p>
-                    <p class="text">Доставка курьером по СПБ <br> и Ленинградской области</p>
-                </div>
-                <div class="advantageItem" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="700">
-                    <img src="img/light/consult.png" alt="" class="advantageImage">
-                    <p class="subtitleText">Консультируем по ассортименту</p>
-                    <p class="text">Индивидуальные консультации<br>по подбору оптимального решения</p>
-                </div>
-                <div class="advantageItem" data-aos="zoom-in-left" data-aos-delay="200" data-aos-duration="700">
-                    <img src="img/light/photo.png" alt="" class="advantageImage">
-                    <p class="subtitleText">Фотопечать</p>
-                    <p class="text">Печатаем на кондитерских<br>изделиях на съедобной бумаге</p>
-                </div>
-                <div class="advantageItem" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="700">
-                    <img src="img/light/rent.png" alt="" class="advantageImage">
-                    <p class="subtitleText">Выдаём напрокат</p>
-                    <p class="text">Прокат кондитерских форм<br>и приспособлений</p>
-                </div>
-                <div class="advantageItem" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="700">
-                    <img src="img/light/hours.png" alt="" class="advantageImage">
-                    <p class="subtitleText">Работаем круглосуточно</p>
-                    <p class="text">Самовывоз из магазина<br>доступен 24 часа</p>
-                </div>
+        <h1 class="HeadingTitle centerTitle" data-aos-duration="1000" data-aos="fade-in">Наши преимущества</h1>
 
 
+        <div class="advantageItems">
 
+            <div class="advantageItem" data-aos="zoom-in-right"  data-aos-duration="700">
+                <img src="img/light/delivery.png" alt="" class="advantageImage">
+                <p class="subtitleText">Доставляем на дом</p>
+                <p class="text">Доставка курьером по СПБ <br> и Ленинградской области</p>
+            </div>
+            <div class="advantageItem" data-aos="zoom-in-up"  data-aos-duration="700">
+                <img src="img/light/consult.png" alt="" class="advantageImage">
+                <p class="subtitleText">Консультируем по ассортименту</p>
+                <p class="text">Индивидуальные консультации<br>по подбору оптимального решения</p>
+            </div>
+            <div class="advantageItem" data-aos="zoom-in-left"  data-aos-duration="700">
+                <img src="img/light/photo.png" alt="" class="advantageImage">
+                <p class="subtitleText">Фотопечать</p>
+                <p class="text">Печатаем на кондитерских<br>изделиях на съедобной бумаге</p>
+            </div>
+            <div class="advantageItem" data-aos="zoom-in-up"  data-aos-duration="700">
+                <img src="img/light/rent.png" alt="" class="advantageImage">
+                <p class="subtitleText">Выдаём напрокат</p>
+                <p class="text">Прокат кондитерских форм<br>и приспособлений</p>
+            </div>
+            <div class="advantageItem" data-aos="zoom-in-up"  data-aos-duration="700">
+                <img src="img/light/hours.png" alt="" class="advantageImage">
+                <p class="subtitleText">Работаем круглосуточно</p>
+                <p class="text">Самовывоз из магазина<br>доступен 24 часа</p>
             </div>
 
-       
+
+
+        </div>
 
 
 
-        
-        <h1 class="HeadingTitle centerTitle" id="specialOffers" data-aos-delay="200" data-aos-duration="1000"  data-aos="fade-in">Специальные предложения</h1>
 
 
-            
+
+        <h1 class="HeadingTitle centerTitle" id="specialOffers" data-aos-delay="200" data-aos-duration="1000"
+            data-aos="fade-in">Специальные предложения</h1>
+
+
+
         <div class="offersBlock">
             <div class="offer offerLeft" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-right">
                 <div class="offerImg" id="FirstOffer">
-                    
+
                 </div>
                 <div class="offerInfo">
                     <div class="offerTitle">
@@ -133,29 +167,29 @@
                     <p class="offerText">При заказе товаров на сумму от 5000 руб. вы можете <br>
                         оформить бесплатную доставку на любое удобное <br>
                         для вас время по нужному адресу.</p>
-                    
+
                 </div>
             </div>
             <div class="offer offerRight" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-left">
                 <div class="offerImg" id="SecondOffer">
-                    
+
                 </div>
                 <div class="offerInfo">
                     <div class="offerTitle">
                         <p class="offerOrder">02<br>
-                        Курьерская служба
+                            Курьерская служба
                         </p>
                         <img class="offerBlob" src="img/light/Blob_02.png" alt="">
                     </div>
                     <p class="offerText">Мы предоставляем круглосуточную доставку товаров курьерской<br>
                         службой по Санкт-Петербургу,<br>
                         а также в пределах Ленинградской области.</p>
-                    
+
                 </div>
             </div>
             <div class="offer offerLeft" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-right">
                 <div class="offerImg" id="ThirdOffer">
-                    
+
                 </div>
                 <div class="offerInfo">
                     <div class="offerTitle">
@@ -167,18 +201,19 @@
                     <p class="offerText">Мы принимаем и обрабатываем ваши заявки<br>
                         как на оформление доставки товаров на дом,<br>
                         так и на оформление самовывоза 24 часа в сутки.</p>
-                    
+
                 </div>
             </div>
         </div>
 
 
-        <div class="sellBlock" data-aos-delay="200" data-aos-duration="1000"  data-aos="fade-in">
-            <h1 class="HeadingTitle itemsTitle" id="blobTitle" data-aos-delay="200" data-aos-duration="1000"  data-aos="fade-in">Популярные товары</h1>
+        <div class="sellBlock" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-in">
+            <h1 class="HeadingTitle itemsTitle" id="blobTitle" data-aos-delay="200" data-aos-duration="1000"
+                data-aos="fade-in">Популярные товары</h1>
 
 
             <div class="sliderBlock mySwiper swiper">
-                
+
                 <div class="sliderItems swiper-wrapper">
                     <div class=" swiper-slide sliderCard">
                         <div class="sliderImg" id="firstSliderImg"></div>
@@ -231,7 +266,7 @@
 
 
 
-        <div class="contactBlock" data-aos-delay="150"  data-aos-duration="1000"  data-aos="fade-in">
+        <div class="contactBlock" data-aos-delay="150" data-aos-duration="1000" data-aos="fade-in">
             <h1 class="HeadingTitle " id="contactTitle">Свяжитесь с нами</h1>
             <p class="contactSubtitle">Оставьте свои контактные данные и мы обязательно свяжемся с вами</p>
 
@@ -241,72 +276,72 @@
                 </div>
                 <div class="contacts">
 
-                
-                <div class="form">
-                    <input placeholder="* ФИО" type="text" name="Name" id="NameInput">
-                    <input placeholder="* E-mail" type="email" name="email" id="emailInput">
-                    <input id="sendButton" type="submit" value="Отправить">
-                </div>
 
-                <div class="contactText">
-                    <div class="contactItem">
-                        <img src="img/light/mailIcon.png" alt="" class="contactIcon">
-                        <p class="text">info@pincake.ru</p>
+                    <div class="form">
+                        <input placeholder="* ФИО" type="text" name="Name" id="NameInput">
+                        <input placeholder="* E-mail" type="email" name="email" id="emailInput">
+                        <input id="sendButton" type="submit" value="Отправить">
                     </div>
-                    <div class="contactItem">
-                        <img src="img/light/phoneIcon.png" alt="" class="contactIcon">
-                        <p class="text">+7(812)-111-22-33</p>
-                    </div>
-                    <div class="contactItem">
-                        <img src="img/light/placeIcon.png" alt="" class="contactIcon">
-                        <p class="text">Россия, 191186, Санкт-Петербург,<br>
-                            Ул. Большая Морская, 18</p>
-                    </div>
-                </div>
 
-             </div>
+                    <div class="contactText">
+                        <div class="contactItem">
+                            <img src="img/light/mailIcon.png" alt="" class="contactIcon">
+                            <p class="text">info@pincake.ru</p>
+                        </div>
+                        <div class="contactItem">
+                            <img src="img/light/phoneIcon.png" alt="" class="contactIcon">
+                            <p class="text">+7(812)-111-22-33</p>
+                        </div>
+                        <div class="contactItem">
+                            <img src="img/light/placeIcon.png" alt="" class="contactIcon">
+                            <p class="text">Россия, 191186, Санкт-Петербург,<br>
+                                Ул. Большая Морская, 18</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-       
+
     </main>
 
-    <footer class="footer" data-aos-delay="100"  data-aos-duration="1000"  data-aos="fade-in">
-    <div class="footerNav">
-        <a href="#" class="navLink">О нас</a>
-        <a href="#" class="navLink">Контакты</a>
-        <a href="#" class="navLink">Товары</a>
-        <a href="#" class="navLink">Услуги</a>
-    </div>
-    <div class="footerNav">
-        <a href="#" class="navLink">Работаем круглосуточно</a>
-        <a href="#" class="navLink">Сдаем в аренду кондитерские <br> принадлежности</a>
-        <a href="#" class="navLink">Онлайн консультация по услугам</a>
+    <footer class="footer" data-aos-delay="100" data-aos-duration="1000"  data-aos="fade-in">
+        <div class="footerNav">
+            <a href="#" class="navLink">О нас</a>
+            <a href="#" class="navLink">Контакты</a>
+            <a href="#" class="navLink">Товары</a>
+            <a href="#" class="navLink">Услуги</a>
+        </div>
+        <div class="footerNav">
+            <a href="#" class="navLink">Работаем круглосуточно</a>
+            <a href="#" class="navLink">Сдаем в аренду кондитерские <br> принадлежности</a>
+            <a href="#" class="navLink">Онлайн консультация по услугам</a>
 
-    </div>
-    
-    <img src="img/light/LOGO-Light.png" alt="" class="footerLogo">
+        </div>
 
-    <div class="footerNav">
-        <a href="#" class="navLink">WhatsApp</a>
-        <a href="#" class="navLink">Telegram</a>
-        <a href="#" class="navLink">VK</a>
-        <a href="#" class="navLink">Instagram</a>
-    </div>
-    <div class="contactText">
-        <div class="contactItem">
-            <img src="img/light/mailIcon.png" alt="" class="contactIcon">
-            <p class="text">info@pincake.ru</p>
+        <img src="img/light/LOGO-Light.png" alt="" class="footerLogo">
+
+        <div class="footerNav">
+            <a href="#" class="navLink">WhatsApp</a>
+            <a href="#" class="navLink">Telegram</a>
+            <a href="#" class="navLink">VK</a>
+            <a href="#" class="navLink">Instagram</a>
         </div>
-        <div class="contactItem">
-            <img src="img/light/phoneIcon.png" alt="" class="contactIcon">
-            <p class="text">+7(812)-111-22-33</p>
+        <div class="contactText">
+            <div class="contactItem">
+                <img src="img/light/mailIcon.png" alt="" class="contactIcon">
+                <p class="text">info@pincake.ru</p>
+            </div>
+            <div class="contactItem">
+                <img src="img/light/phoneIcon.png" alt="" class="contactIcon">
+                <p class="text">+7(812)-111-22-33</p>
+            </div>
+            <div class="contactItem">
+                <img src="img/light/placeIcon.png" alt="" class="contactIcon">
+                <p class="text">Россия, 191186, Санкт-Петербург,<br>
+                    Ул. Большая Морская, 18</p>
+            </div>
         </div>
-        <div class="contactItem">
-            <img src="img/light/placeIcon.png" alt="" class="contactIcon">
-            <p class="text">Россия, 191186, Санкт-Петербург,<br>
-                Ул. Большая Морская, 18</p>
-        </div>
-    </div>
 
 
     </footer>
@@ -316,31 +351,44 @@
 
     <script>
         AOS.init();
-      </script>
-
-
-
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-        watchOverflow: true,
-      loop: true,
-    spaceBetween:30,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-
-<script>
-        // Проверяем, открыта ли страница через локальный файл
-        if (window.location.protocol === "file:") {
-            // Если страница открыта через локальный файл, перенаправляем на пустую страницу или отображаем сообщение
-            // window.location.href = "empty.html";
-            document.body.innerHTML = "<h1>Доступ к сайту доступен только через локальный сервер</h1>";
-        }
     </script>
 
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            watchOverflow: true,
+            loop: true,
+            autoplay:{
+                delay:5000
+            },
+            pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }, 
+            breakpoints: {
+    1500: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    1000:{
+        slidesPerView:2
+    },
+    200:{
+        slidesPerView: 1
+    }
+  }
+        });
+    </script>
+
+
+
 </body>
+
 </html>

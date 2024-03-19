@@ -131,6 +131,8 @@ font-family: Gilroy,'Segoe UI';
 font-size: 20px;
 
 color: var(--text-color-light);
+
+overflow-x: hidden;
 }
 
 
@@ -148,7 +150,7 @@ a{
 
 .header{
 
-    height: 7rem;
+    height: 15%;
     display: flex;
 
     gap: 3rem;
@@ -162,7 +164,9 @@ a{
     font-family: Gilroy;
     font-weight: normal;
 
-    font-size: 21px;
+    font-size: 1.1rem;
+
+    
 
 }
 
@@ -178,7 +182,10 @@ a{
     position: relative;
     z-index: 2;
     top: 60%;
+
 }
+
+
 
 
 
@@ -212,13 +219,13 @@ a{
 }
 
 .text{
-    font-size: 21px;
+    font-size: 1.1rem;
     font-weight: 300;
     width: -webkit-fill-available;
 }
 
 .subtitleText{
-    font-size: 21px;
+    font-size: 1.1rem;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -230,16 +237,16 @@ a{
 
 .themeTogglerButton{
     position: fixed;
-    top: 5rem;
-    right: 5rem;
-    width: 2rem;
-    height: 2rem;
+    top: 20%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
     opacity: .7;
     background-color: transparent;
     border: none;
     background-image: url(img/sun.png);
     background-size: contain;
-    z-index: 100;
+    z-index: 5;
 }
 
 .themeTogglerButton:hover{
@@ -252,7 +259,7 @@ a{
     text-align: center;
     background-color: var(--first-accent-color-light);
     color: white;
-    width: 15rem;
+    width: 50%;
     padding: 0.5rem;
     border-radius: 2rem;
     justify-content: center;
@@ -655,13 +662,157 @@ img[src*="img/light/LOGO-Light.png"]{
     background-size: cover;
 }
 
+#headerSmall{
+    display: none;
+
+}
+
+.navbarToggler{
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(img/hamburger.png);
+    right: 5%;
+
+    z-index: 11;
+}
+
+
 @media (max-width: 1500px) { 
 
+    .footer{
+        gap: 5%;
+    }
+    .map img{
+        height: 100%;
+        width: 100%;
+    }
     .FlexWrap{
         flex-wrap: wrap;
     }
 
+    
+
+    .headingBlock{
+        height: fit-content;
+        padding-bottom: 10rem;
+    }
+
+    
+
+    .HeaderLogo img{
+        width: 70%;
+    }
+
+    #headerWide{
+        display: none;
+    }
+
+   #headerSmall{
+    display: flex;
+    margin-bottom: 15%;
+    z-index: 10;
+
+   }
+
+ }
+
+ @media (max-width:950px){
+    
+    .swiper-button-next,.swiper-button-prev{
+        display: none;
+    }
+
+    .HeadingTitle{
+        font-size: 2rem ;
+        font-family: Gilroy;
+        font-weight: 500;
+    
+    }
+   .offerOrder{
+    left: 0;
+    word-break:break-all;
+   }
+
+   .offer{
+    flex-direction: column;
+    hyphens:auto;
+
+   }
+
+   .offerImg{
+    display: none;
+    background-size: cover;
+
+    height: 0px;
+    width: 0px;
+}
+
+   .centerTitle{
+    font-size: 2rem;
+    margin-top: 20% !important;
+    text-wrap: wrap;
+   }
+
+   .sliderTitle{
+    font-size: 1.5rem;
+   }
+
+   .navBlock{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    
+    background-color: var(--main-bg-color-light);
+    flex-direction: column;
+
+    z-index: 10;
+   }
+
+   .navBlock div{
+    padding: 2rem;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+   }
+
+    #contactTitle{
+        font-size: 1.5rem; 
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .contactBlock {
+        margin: 10% 5%;
+        padding: 5% 5%;
+        background-color: var(--second-accent-color-light);
+        border: solid 1px var(--text-color-light);
+        border-radius: 27px;
+    }
 
 
+    
+    .footer{
+        background-image: var(--footerBG-Light);
+        background-repeat: no-repeat;
+        padding: 0% 5% 5% 5%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        align-items: center;
+        gap: 5%; 
 
+        background-position:bottom;
+        margin-top: 10rem;
+        align-content: center;
+       
+    }
+
+    .footerNav{
+        display: none;
+    }
  }
