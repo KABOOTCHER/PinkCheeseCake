@@ -735,13 +735,16 @@ img[src*="img/light/LOGO-Light.png"]{
     }
    .offerOrder{
     left: 0;
-    word-break:break-all;
+    
    }
 
    .offer{
     flex-direction: column;
     hyphens:auto;
 
+   }
+   .offerInfo{
+    font-size: 1.5rem;
    }
 
    .offerImg{
