@@ -683,11 +683,15 @@ img[src*="img/light/LOGO-Light.png"]{
 }
 
 .darkButton:hover{
+    
     filter: brightness(1.1);
+    cursor: pointer;
 }
 
 .navLink:hover{
-    text-shadow: var(--first-accent-color-light) 0px 0px 10px; 
+    text-shadow: var(--first-accent-color-light) 0px 0px 20px; 
+    font-weight: 500;
+    cursor: pointer;
 }
 
 @media (max-width: 1500px) { 
