@@ -277,11 +277,11 @@
                 <div class="contacts">
 
 
-                    <div class="form">
-                        <input placeholder="* ФИО" type="text" name="Name" id="NameInput">
-                        <input placeholder="* E-mail" type="email" name="email" id="emailInput">
-                        <input id="sendButton" type="submit" value="Отправить">
-                    </div>
+                    <form class="form" method ="post" action ="sender.php">
+                        <input placeholder="* ФИО" type="text" name="name" id="NameInput" required>
+                        <input placeholder="* E-mail" type="email" name="email" id="emailInput" required>
+                        <input class="darkButton" id="sendButton" type="submit" value="Отправить" >
+                    </form>
 
                     <div class="contactText">
                         <div class="contactItem">

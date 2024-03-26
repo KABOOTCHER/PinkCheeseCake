@@ -1,6 +1,6 @@
 if (window.location.protocol === "file:") {
 
-    document.body.innerHTML = "<h1> Вы не можете открыть файл локально. </h1>";
+    document.body.innerHTML = "Запустите локальный сервер для просмотра сайта ";
 }
 
 

@@ -508,6 +508,7 @@ a{
 
     gap: 1rem;
     margin-left: .5rem;
+    align-items: center;
 
 }
 
@@ -681,6 +682,13 @@ img[src*="img/light/LOGO-Light.png"]{
     z-index: 11;
 }
 
+.darkButton:hover{
+    filter: brightness(1.1);
+}
+
+.navLink:hover{
+    text-shadow: var(--first-accent-color-light) 0px 0px 10px; 
+}
 
 @media (max-width: 1500px) { 
 
