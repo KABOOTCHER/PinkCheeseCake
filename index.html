@@ -277,7 +277,7 @@
                 <div class="contacts">
 
 
-                    <form class="form" method ="post" action ="sender.php">
+                    <form id="contactForm" class="form" method ="post" action ="sender.php">
                         <input placeholder="* ФИО" type="text" name="name" id="NameInput" required>
                         <input placeholder="* E-mail" type="email" name="email" id="emailInput" required>
                         <input class="darkButton" id="sendButton" type="submit" value="Отправить" >
@@ -346,6 +346,7 @@
 
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="firebase.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
