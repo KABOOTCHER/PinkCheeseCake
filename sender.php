@@ -1,40 +1,37 @@
 <?php
-$name = $_POST['name'];
-$email = $_POST['email'];
 
-$to = "bebekin.work@yandex.ru";
-$subject = "Заявка c сайта";
-$date = date("d.m.Y");
-$time = date("h:i");
-$from = $email;
+// Токен вашего бота
+const TOKEN = '6927799024:AAEwMa2NNEzTlmMF2yqW3rlNY0-XgvmxPBA';
 
-$msg = "
-Имя: $name \n
-Почта: $email";
+// ID чата, куда нужно отправить сообщение
+const CHATID = '-4001898258';
 
-// Настройки SMTP сервера
-$smtpServer = 'smtp.yandex.ru'; // SMTP сервер
-$smtpPort = 465; // Порт (обычно 465 для SSL, 587 для TLS)
-$smtpUsername = 'bebekin.work'; // Ваше имя пользователя SMTP
-$smtpPassword = '4ESc0I3Z'; // Ваш пароль SMTP
 
-// Формирование заголовков письма
-$headers = "From: $from\r\n";
-$headers .= "Content-type: text/plain; charset=utf-8\r\n";
 
-// Дополнительные параметры для отправки через SMTP
-$additional_parameters = "-f $from";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-// Настройка параметров для отправки через SMTP
-ini_set('SMTP', $smtpServer);
-ini_set('smtp_port', $smtpPort);
-ini_set('username', $smtpUsername);
-ini_set('password', $smtpPassword);
+    // Проверяем, есть ли имя и почта
+    if (!empty($_POST['name']) && !empty($_POST['email'])) {
+        $txt = "Новое сообщение от " . $_POST['name'] . " (" . $_POST['email'] . ")";
 
-// Отправка письма
-if (mail($to, $subject, $msg, $headers, $additional_parameters)) {
-    echo "Письмо успешно отправлено";
+        // Отправляем сообщение в телеграм
+        $telegramUrl = 'https://api.telegram.org/bot' . TOKEN . '/sendMessage?chat_id=' . CHATID . '&text=' . urlencode($txt);
+        $telegramResponse = file_get_contents($telegramUrl);
+
+        // Если сообщение успешно отправлено
+        if ($telegramResponse) {
+            $response = array('success' => true);
+            echo json_encode($response);
+        } else {
+            $response = array('success' => false);
+            echo json_encode($response);
+        }
+    } else {
+        $response = array('success' => false);
+        echo json_encode($response);
+    }
 } else {
-    echo "Ошибка при отправке письма";
+    header("Location: /");
 }
+
 ?>

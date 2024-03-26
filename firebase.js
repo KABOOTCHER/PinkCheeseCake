@@ -8,8 +8,6 @@ const firebaseConfig = {
     appId: "1:501778632124:web:ed0b1f124f3f5bc6032fb9"
 };
 
-
-
 firebase.initializeApp(firebaseConfig);
 
 var contactFormDB = firebase.database().ref("contactForm");
@@ -20,8 +18,6 @@ function submitForm(e) {
     e.preventDefault();
     var name = getElementVal('NameInput');
     var email = getElementVal('emailInput');
-
-    console.log(name, email);
 
     saveMessages(name, email);
 }
@@ -36,7 +32,7 @@ const saveMessages = (name, email) =>{
         name: name,
         email: email
     }).then(() => {
-        // После успешного сохранения данных в Firebase отправляем письмо
+        // После успешного сохранения данных в Firebase отправляем запрос на сервер для отправки письма
         sendEmail(name, email);
     }).catch(error => {
         console.error("Error saving to Firebase: ", error);
@@ -45,12 +41,16 @@ const saveMessages = (name, email) =>{
 
 function sendEmail(name, email) {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "sender.php", true);
+    xhr.open("POST", "sender.php", true); // Это путь к вашему PHP-скрипту для отправки данных на сервер
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log("Email sent successfully");
-            // Можно добавить дополнительные действия после успешной отправки письма
+            var response = JSON.parse(xhr.responseText);
+            if (response.success) {
+                console.log('Данные успешно отправлены на сервер');
+            } else {
+                console.log('Произошла ошибка при отправке данных на сервер');
+            }
         }
     };
     xhr.send("name=" + name + "&email=" + email);
